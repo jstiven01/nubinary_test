@@ -1,0 +1,15 @@
+<section class="all-events"> 
+    <h1>ALL Tasks</h1>
+    <% @tasks.each do |task| %>
+    <div>
+        <h1><%= task.title %></h1>
+        <p><%= task.status %></p>
+        <p><%= task.description %></p>
+    </div>
+    <% end %>
+
+
+    <div id='create-task'>
+        <%= link_to "Create Task", new_task_path %>
+    </div>
+</section> 

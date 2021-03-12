@@ -1,0 +1,12 @@
+<section class="create-event">
+<h1>Create a Task</h1>
+<%= form_for(@task, url: tasks_path) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :status %>
+      <%= f.select :status, :collection => Task.statuses.keys.to_a %>
+      <%= f.label :description %>
+      <%= f.text_area :description, cols: 20, rows: 20 %>
+      <%= f.submit 'Create Task' %>
+<% end %>
+</section>
